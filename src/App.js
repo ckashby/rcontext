@@ -27,11 +27,6 @@ function App() {
         <Route path="/contact" component={ContactPage} />
         <Route path="/" exact component={HomePage} />
       </div>
-      {/* <section>
-        <ShowContextData />
-        <hr />
-        <UpdateContextData />
-      </section> */}
     </BrowserRouter>
   );
 }
