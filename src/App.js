@@ -1,5 +1,5 @@
 import "./App.css";
-import { BrowserRouter, Route, Link } from "react-router-dom";
+import { BrowserRouter, Link, Route, Switch } from "react-router-dom";
 import AboutPage from "./pages/AboutPage";
 import ContactPage from "./pages/ContactPage";
 import HomePage from "./pages/HomePage";
@@ -23,9 +23,11 @@ function App() {
             </li>
           </ul>
         </nav>
-        <Route path="/about" component={AboutPage} />
-        <Route path="/contact" component={ContactPage} />
-        <Route path="/" exact component={HomePage} />
+        <Switch>
+          <Route path="/about" component={AboutPage} />
+          <Route path="/contact" component={ContactPage} />
+          <Route path="/" exact component={HomePage} />
+        </Switch>
       </div>
     </BrowserRouter>
   );
